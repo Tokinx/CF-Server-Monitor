@@ -109,8 +109,7 @@ for (const file of htmlFiles) {
 
     const scriptSrcDomains = [...new Set([
       ...existingDomains.filter(d => [turnstileDomain, insightsDomain].includes(d)),
-      ...cspStaticDomains,
-      ...cspApiDomains.filter(d => d.startsWith('https://') || d.startsWith('wss://'))
+      ...cspStaticDomains
     ])].join(' ');
 
     const styleSrcDomains = [...new Set([
@@ -130,7 +129,6 @@ for (const file of htmlFiles) {
 
     const connectSrcDomains = [...new Set([
       ...existingDomains.filter(d => [turnstileDomain, insightsDomain].includes(d)),
-      ...cspStaticDomains,
       ...cspApiDomains
     ])].join(' ');
 

@@ -104,7 +104,6 @@ function injectAppearanceSettings(html, settings) {
 
       const connectSrcDomains = [...new Set([
         ...existingDomains.filter(d => ['https://challenges.cloudflare.com', 'https://static.cloudflareinsights.com'].includes(d)),
-        ...staticDomains,
         ...apiDomains
       ])].join(' ');
 
